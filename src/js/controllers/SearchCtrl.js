@@ -1,11 +1,11 @@
 angular.module('scg.controller').controller('SearchCtrl',
-        function($scope, $stateParams, $http) {
+        function($scope, $stateParams, $http, BASE_HOST) {
     'use strict';
 
     $scope.page = 1;
 
     function search() {
-        $http.get('//api.searchchessgames.dev/search', {params: {
+        $http.get(BASE_HOST + '/search', {params: {
                 q: $stateParams.query,
                 p: $scope.page,
             }}).

@@ -4,6 +4,8 @@ angular.module('scg', [
     'ui.router',
 ]);
 
+angular.module('scg').constant('BASE_HOST', '//api.' + window.location.host);
+
 angular.module('scg').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     'use strict';
 
