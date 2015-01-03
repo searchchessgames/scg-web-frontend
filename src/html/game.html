@@ -1,100 +1,26 @@
+<table id="game-viewer-board" style="width: 100%;">
+    <thead>
+        <tr>
+            <th class="white">
+                {{ game.white ? game.white : 'Unknown' }}
+                {{ game.whiteElo ? '(' + game.whiteElo + ')' : '' }}
+            </th>
+            <th class="black">
+                {{ game.black ? game.black : 'Unknown' }}
+                {{ game.blackElo ? '(' + game.blackElo + ')' : '' }}
+            </th>
+        </tr>
+    </thead>
+</table>
 
-    <table id="game-viewer-board" style="width: 100%;">
-        <thead>
-            <tr>
-                <th class="white">
-                    {{ game.white ? game.white : 'Unknown' }}
-                    {{ game.whiteElo ? '(' + game.whiteElo + ')' : '' }}
-                </th>
-                <th class="black">
-                    {{ game.black ? game.black : 'Unknown' }}
-                    {{ game.blackElo ? '(' + game.blackElo + ')' : '' }}
-                </th>
-            </tr>
-        </thead>
-    </table>
+<p ng-bind-html="game.pgn | nl2br"></p>
 
-    <p ng-bind-html="game.pgn | nl2br"></p>
+<script type="text/javascript">
+google_ad_client = "ca-pub-8855148982852658";
+/* SCG - game page */
+google_ad_slot = "0585341989";
+google_ad_width = 120;
+google_ad_height = 240;
+</script>
 
-    <div style="clear: both;"></div>
-
-<!--
-<div id="game-viewer"
-    data-half-moves-count="{{game.movesCount}}"
-    data-result="{{game.result}}">
-
-    <table id="game-viewer-board">
-        <thead>
-            <tr>
-                <th></th>
-                <th colspan="4" class="white">
-                    {{ game.white ? game.white : 'Unknown' }}
-                    {{ game.whiteElo ? '(' + game.whiteElo + ')' : '' }}
-                </th>
-                <th colspan="4" class="black">
-                    {{ game.black ? game.black : 'Unknown' }}
-                    {{ game.blackElo ? '(' + game.blackElo + ')' : '' }}
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="row in [8,7,6,5,4,3,2,1]">
-                <th>{{ row }}</th>
-
-                {% for col in 'a'..'h' %}
-                    <td id="game-viewer-square-{{ col }}{{ row }}" class="{{ color }}"></td>
-                {% endfor %}
-            </tr>
-
-            <tr>
-                <th></th>
-                {% for col in 'a'..'h' %}
-                    <th>{{col}}</th>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
-
-    <div id="game-viewer-right">
-        <p>
-            Press
-            <span class="arrow-key">&RightArrow;</span> and
-            <span class="arrow-key">&LeftArrow;</span> to navigate
-        </p>
-
-        <ol>
-            {% for move in game.getMovesArray() %}
-                <li id="game-viewer-move-{{loop.index}}"
-                    class="{% if loop.first %}current{% endif %}">
-                    {{move}}
-                </li>
-            {% endfor %}
-
-            {% if game.result %}
-                <li id="game-viewer-result">{{ game.result }}</li>
-            {% endif %}
-        </ol>
-
-        <p class="site">
-            {{ game.getEventSiteDatePrettyPrint() }}
-        </p>
-
-        <p>
-            <a href="@todo"><button class="button-grey" title="Download PGN file">Download</button></a>
-        </p>
-    </div>
-    -->
-
-    <!--<script type="text/javascript">
-    google_ad_client = "ca-pub-8855148982852658";
-    /* SCG - game page */
-    google_ad_slot = "0585341989";
-    google_ad_width = 120;
-    google_ad_height = 240;
-    </script>
-
-    <div style="clear: both;"></div>
-</div>
-
-<script> var gameViewer = new chess.GameViewer(); </script>
--->
+<div style="clear: both;"></div>
