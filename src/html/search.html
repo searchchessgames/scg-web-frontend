@@ -1,0 +1,30 @@
+<table id="search-results">
+    <tbody ng-repeat="game in games">
+        <tr>
+            <td class="col-1">{{ game.white }}</td>
+            <td class="col-2">{{ game.black }}</td>
+            <td class="col-3">{{ game.moves }} {{ game.result ? game.result : '' }}</td>
+            <td class="col-4">{{ game.getEventSiteDatePrettyPrint() }}</td>
+            <td class="col-5">
+                <a ui-sref="game({slug: game.slug})"><button class="button-green">View Game</button></a>
+            </td>
+        </tr>
+    </tbody>
+
+    <tfoot ng-if="count > page * 30">
+        <tr>
+            <td colspan="2"></td>
+            <td colspan="3">
+                <a ng-click="nextPage()"><button class="button-green">Show More</button></a>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<!--<script>
+    google_ad_client = "ca-pub-8855148982852658";
+    /* SCG - below search results */
+    google_ad_slot = "3897996674";
+    google_ad_width = 468;
+    google_ad_height = 60;
+</script>-->

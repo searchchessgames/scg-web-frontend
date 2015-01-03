@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="scg">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="/css/styles.min.css" type="text/css" media="all" />
+        <title>SearchChessGames.com</title>
+        <meta name="description" content="Search by player name, opening moves, event, or location" />
+        <base href="/" />
+
+        <!-- Google Analytics -->
+        <!--<script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-25238227-3']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>-->
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-inside">
+                <a ui-sref="index" id="logo">
+                    <img src="/images/logo.png" alt="" width="177" height="69" />
+                </a>
+
+                <ul id="menu">
+                    <li><g:plusone></g:plusone></li>
+                </ul>
+
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+
+        <div id="wrapper">
+            <div class="flash-message" ng-if="flash"></div>
+
+            <div id="content" ui-view="main">
+            </div>
+
+            <div id="footer">
+                <p>
+                    Copyright 2015 <a href="http://amyboyd.co.uk/">Amy Boyd</a>
+                </p>
+            </div>
+        </div>
+
+        <script src="/frontend.js"></script>
+
+        <!-- +1 button -->
+        <!--<script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>-->
+
+        <!--<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>-->
+    </body>
+</html>

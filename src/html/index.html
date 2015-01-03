@@ -1,0 +1,12 @@
+<form ng-submit="search()">
+    <p>
+        <label id="index-instructions" for="index-q">
+            Search by player name, opening moves, event, or location:
+        </label>
+    </p>
+    <p>
+        <input type="text" name="q" ng-model="query" id="index-q" size="60"
+                placeholder="examples: kasparov, e4 e5 f4 exf4, paris" />
+        <input type="submit" value="Go" class="button-green" />
+    </p>
+</form>

@@ -1,0 +1,245 @@
+@import '_reset.scss';
+@import '_game-viewer.scss';
+
+html, body {
+    background-color: #EFEFEF;
+}
+body {
+    font-size:        14px;
+    font-family:      "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    color:            #313131;
+}
+a {
+    color:           #08C;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+h1, h2, h3 {
+    font-family:    Georgia, "Times New Roman", Times, serif;
+    color:          #404040;
+}
+h1 {
+    font-size:      45px;
+    padding-bottom: 30px;
+}
+h2 {
+    font-weight:   bold;
+    color:         #FFFFFF;
+    /* Font is duplicated of body (sans-serif) */
+    font-family:      "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    margin-bottom:    10px;
+    background-color: #aacd4e;
+    padding:          2px 4px;
+    display:          inline-block;
+    text-transform:   uppercase;
+
+}
+p {
+    line-height:    20px;
+    padding-bottom: 20px;
+}
+ul, ol
+{
+    padding-left: 20px;
+}
+li {
+    padding-bottom: 18px;
+}
+ol li {
+    list-style-type: decimal;
+}
+ul li {
+    list-style-type: none;
+}
+input[type=text], input[type=password] {
+    border:      1px solid #DADADA;
+    background:  white url('/images/field-background.gif') repeat-x left top;
+    padding:     5px 6px;
+    color:       #565656;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    font-size:   12px;
+}
+.button-grey,
+.button-green {
+    font-size: 0.85em;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: inline-block;
+    outline: none;
+
+    text-align:     center;
+    text-transform: uppercase;
+
+    padding: 3px 10px;
+
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius:    4px;
+    border-radius:         4px;
+}
+.button-grey {
+    color:       #868686;
+    font-weight: normal;
+    padding:    5px 10px;
+    border:     solid 1px #d7d7d7;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d7d7d7));
+    background: -moz-linear-gradient(top,  #ffffff,  #d7d7d7);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d7d7d7');
+}
+.button-green {
+    padding: 5px 12px;
+    color: white;
+    border:     solid 1px #a7da39;
+    background: #a7da39;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a7da39), to(#6a9211));
+    background: -moz-linear-gradient(top,  #a7da39,  #6a9211);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7da39', endColorstr='#6a9211');
+}
+.error {
+    color: red;
+}
+
+
+/* Header (logo, menu) ************************************/
+
+#header {
+    height: 96px;
+    margin-bottom: 20px;
+    background: #5B5B5B;
+    background: -moz-linear-gradient(center top , #5B5B5B, #060606) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5B5B5B), to(#060606));
+}
+#header-inside {
+    width: 960px;
+    margin: 0 auto;
+    padding: 13px 30px 0px 30px;
+}
+#logo {
+    float: left;
+}
+ul#menu {
+    float: right;
+    margin: 25px 15px 0 0;
+    padding: 0;
+}
+#menu li {
+    padding-left: 0;
+    margin-right: 14px;
+    display: inline;
+}
+#menu li,
+#menu li a {
+    color: #DCD9CB;
+    font-size: 16px;
+    font-weight: bold;
+}
+#menu li:last-child {
+    position: relative;
+    top: 6px;
+}
+
+
+/* Main content *******************************************/
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+#content {
+    background-color:           white;
+    border:                     1px solid #DFDFDF;
+    padding:                    50px;
+    -moz-border-radius:         16px;
+    -webkit-border-radius:      16px;
+    border-radius:              16px;
+    margin-bottom:              50px;
+    word-wrap:                  break-word;
+}
+.flash-message {
+    padding: 10px;
+    margin: 5px;
+    margin-top: 15px;
+    background-color: #ffe;
+}
+
+
+/* Footer ****************************************************/
+
+#footer {
+    font-size: 0.9em;
+}
+
+
+/* Index *****************************************************/
+
+#index-instructions {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Search results ********************************************/
+
+#search-results {
+    width: 100%;
+}
+#search-results td, #search-results th {
+    vertical-align: top;
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
+#search-results .col-1 {
+    padding-left: 7px;
+    padding-right: 4px;
+    width: 100px;
+    color: #000;
+    background-color: #e7cea5;
+    border-left: 1px solid #DCD9CB;
+    border-top: 1px solid #DCD9CB;
+}
+#search-results tr:last-child .col-1 {
+    border-bottom: 1px solid #DCD9CB;
+}
+#search-results .col-2 {
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 100px;
+    color: #FFF;
+    background-color: #B17B4E;
+}
+#search-results .col-3 {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+#search-results .col-4 {
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 160px;
+}
+#search-results .col-5 {
+    padding-left: 4px;
+    padding-right: 0;
+    width: 91px;
+}
+
+
+/* About *******************************************/
+
+#about {
+    float: left;
+    width: 65%;
+}
+#submit-games {
+}

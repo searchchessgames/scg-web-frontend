@@ -1,0 +1,27 @@
+{
+  "name": "searchchessgames-web-frontend",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/searchchessgames/scg-web-frontend.git"
+  },
+  "author": "Amy Boyd <amy@amyboyd.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/searchchessgames/scg-web-frontend/issues"
+  },
+  "homepage": "https://github.com/searchchessgames/scg-web-frontend",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-sass": "~0.16.1",
+    "grunt-csso": "git://github.com/amyboyd/grunt-csso.git",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-copy": "0.4.1",
+    "grunt-ftp-deploy": "~0.0.10",
+    "grunt-contrib-htmlmin": "~0.3.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "matchdep": "~0.1.2"
+  }
+}

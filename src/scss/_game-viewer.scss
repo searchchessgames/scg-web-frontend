@@ -1,0 +1,107 @@
+#game-viewer-board {
+    float: left;
+}
+
+/* White and black player names are in the <thead>. */
+#game-viewer-board thead th {
+    font-weight: bold;
+    font-size: 1.15em;
+    border-bottom: 6px solid #fff;
+    padding: 2px 3px;
+    width: 40px;
+}
+#game-viewer-board thead th.white {
+    background-color: #e7cea5;
+    text-align: right;
+    padding-right: 5px;
+}
+#game-viewer-board thead th.black {
+    background-color: #B17B4E;
+    text-align: left;
+    padding-left: 5px;
+    color: white;
+}
+
+/* Draw a border around the edge of the connected squares */
+#game-viewer-board tbody tr:first-child td {
+    border-top: 1px solid #DCD9CB;
+}
+#game-viewer-board tbody tr:nth-last-child(2) td {
+    border-bottom: 1px solid #DCD9CB;
+}
+#game-viewer-board tbody tr td:nth-child(2) {
+    border-left: 1px solid #DCD9CB;
+}
+#game-viewer-board tbody tr td:last-child {
+    border-right: 1px solid #DCD9CB;
+}
+
+#game-viewer-board tbody th,
+#game-viewer-board tbody td {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: default;
+}
+#game-viewer-board tbody th {
+    font-size: 0.9em;
+    color: #aaa;
+    speak: none;
+}
+#game-viewer-board tbody td {
+    background-image: url('/images/pieces-48.png');
+    background-position: 50px 50px;
+    background-repeat: no-repeat;
+}
+#game-viewer-board tbody td.w {
+    background-color: #e7cea5;
+}
+#game-viewer-board tbody td.b {
+    background-color: #B17B4E;
+}
+
+
+#game-viewer-right {
+    float: left;
+    width: 210px;
+    margin-left: 28px;
+}
+#game-viewer-right p {
+    margin-left: 15px;
+    padding-bottom: 15px;
+    color: #aaa;
+}
+#game-viewer-right .arrow-key {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#game-viewer-right ol {
+    height: 377px;
+    width: 222px; /* the minimum width to accomodate a vertical scroll bar */
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-size: 1.15em;
+}
+#game-viewer-right ol li {
+    float: left;
+    width: 84px; /* the minimum width to accomodate large moves like ""exd8=Q+" */
+    margin: 0 0 0 14px;
+    padding: 0;
+    line-height: 1.8em;
+    list-style-type: none;
+    pause-after: 2s;
+    speak: spell-out;
+}
+#game-viewer-right ol li.current {
+    list-style-image: url('/images/blue-arrow.png');
+    list-style-position: outside;
+}
+
+#game-viewer-right .site {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
