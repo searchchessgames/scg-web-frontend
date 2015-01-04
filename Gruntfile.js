@@ -102,18 +102,6 @@ module.exports = function (grunt) {
                 }
             },
         },
-
-        'ftp-deploy': {
-            deploy: {
-                auth: {
-                  host: 'searchchessgames.com',
-                  port: 21
-                },
-                src: 'dist',
-                dest: 'scg-web',
-                exclusions: []
-            },
-        }
     });
 
     grunt.registerTask('default', [
@@ -127,10 +115,5 @@ module.exports = function (grunt) {
         'copy:dist',
         'concat:js',
         'htmlmin:dist',
-    ]);
-
-    grunt.registerTask('deploy', [
-        'dist',
-        'ftp-deploy',
     ]);
 };
